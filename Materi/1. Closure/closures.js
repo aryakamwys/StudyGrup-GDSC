@@ -1,10 +1,10 @@
 const globalVariable = "Ini Global Variables";  
   
 function parentFunction() {  
-  var parentVariable = "Ini Variable Induk";  
+  const parentVariable = "Ini Variable Induk";  
   
   function closures() {  
-    var closuresVariable = "Ini Local Variables";  
+    const closuresVariable = "Ini Local Variables";  
     return closuresVariable + " dan " + parentVariable;  
   }  
   

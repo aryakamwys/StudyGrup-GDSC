@@ -7,6 +7,8 @@ function doTask(taskName, callback) {
 // Memanggil doTask dengan nama tugas dan callback  
 doTask("Task 1", () => console.log("Task 1 completed!"));
 
+//========================================================================================================================
+
 // Fungsi fetchData untuk mengambil data  
 function fetchData(data, callback) {
   if (typeof data !== "string") {
@@ -16,39 +18,18 @@ function fetchData(data, callback) {
 }
 
 // Memanggil fetchData dengan callback  
-fetchData(1, (err, data) => {
-  if (err) {
-    console.log(err.message);
-  } else {
-    console.log(data);
-  }
-}); // Menghasilkan error karena data bukan string  
+// fetchData(1, (err, data) => {
+//   if (err) {
+//     console.log(err.message);
+//   } else {
+//     console.log(data);
+//   }
+// }); // Menghasilkan error karena data bukan string  
 
-// Fungsi fetchData dengan setTimeout untuk simulasi pengambilan data  
-function fetchData(callback) {
-  setTimeout(() => {
-    console.log("Data fetched!");
-    callback();
-  }, 3000);
-}
-
-// Memanggil fetchData  
-fetchData(() => console.log("Callback executed after fetching data"));
-
-// Menggunakan arrow function untuk doTask  
-const doTask = (taskName, callback) => {
-  console.log(`Starting ${taskName}...`);
-  callback();
-}
-
-// Callback untuk doTask  
-const callback = () => console.log('Task 1 Completed!')
-
-// Memanggil doTask dengan callback  
-doTask("Task 1", callback);
+//========================================================================================================================
 
 // Fungsi fetchData dengan status dan callback  
-const fetchData = (status, callback) => {
+const fetchData2 = (status, callback) => {
   setTimeout(() => {
     console.log("Data fetched!");
 
@@ -71,10 +52,10 @@ const callbackfunc = (err, status) => {
 }
 
 // Memanggil fetchData  
-fetchData(false, callbackfunc); // Data fetched!  
+fetchData2(false, callbackfunc); // Data fetched!  
 
 // HATI HATI DENGAN CALLBACK HELL 
-fetchData(true, (err, status) => {
+fetchData2(true, (err, status) => {
   if (err) {
     console.log(`Step 1 failed: ${err.message}`);
   } else {
