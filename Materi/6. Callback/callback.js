@@ -1,4 +1,6 @@
-// Fungsi doTask yang menerima nama tugas dan callback  
+// ======================================================================================
+// 1. Fungsi doTask yang menerima nama tugas dan callback  
+// ======================================================================================
 function doTask(taskName, callback) {
   console.log(`Starting ${taskName}...`);
   callback();
@@ -7,28 +9,29 @@ function doTask(taskName, callback) {
 // Memanggil doTask dengan nama tugas dan callback  
 doTask("Task 1", () => console.log("Task 1 completed!"));
 
-//========================================================================================================================
-
-// Fungsi fetchData untuk mengambil data  
+// ======================================================================================
+// 2. Fungsi fetchData untuk mengambil data  
+// ======================================================================================
 function fetchData(data, callback) {
   if (typeof data !== "string") {
     callback(new Error("Data must be a string"), null);
+    return; // Menghentikan eksekusi jika data bukan string
   }
   callback(null, data);
 }
 
 // Memanggil fetchData dengan callback  
-// fetchData(1, (err, data) => {
-//   if (err) {
-//     console.log(err.message);
-//   } else {
-//     console.log(data);
-//   }
-// }); // Menghasilkan error karena data bukan string  
+fetchData(1, (err, data) => {
+  if (err) {
+    console.log(err.message); // Menghasilkan error karena data bukan string  
+  } else {
+    console.log(data);
+  }
+});
 
-//========================================================================================================================
-
-// Fungsi fetchData dengan status dan callback  
+// ======================================================================================
+// 3. Fungsi fetchData dengan status dan callback  
+// ======================================================================================
 const fetchData2 = (status, callback) => {
   setTimeout(() => {
     console.log("Data fetched!");
@@ -54,7 +57,9 @@ const callbackfunc = (err, status) => {
 // Memanggil fetchData  
 fetchData2(false, callbackfunc); // Data fetched!  
 
-// HATI HATI DENGAN CALLBACK HELL 
+// ======================================================================================
+// 4. HATI-HATI DENGAN CALLBACK HELL 
+// ======================================================================================
 fetchData2(true, (err, status) => {
   if (err) {
     console.log(`Step 1 failed: ${err.message}`);
@@ -76,3 +81,4 @@ fetchData2(true, (err, status) => {
     });
   }
 });  
+// ======================================================================================

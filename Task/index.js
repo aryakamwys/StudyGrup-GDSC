@@ -9,11 +9,11 @@ let notes = [
 ]
 
 const createNote = () => {
-  //kode kalian
+  // kode kalian
 }
 
 const readNote = () => {
-  //kode kalian
+  // kode kalian
 }
 
 const updateNote = () => {
@@ -21,12 +21,15 @@ const updateNote = () => {
 }
 
 const deleteNote = () => {
-  //kode kalian
+  // kode kalian
 }
 
-// mengetes kode : 
-
+// mengetes kode (diharapkan untuk tidak diganti): 
 createNote("Belajar React", "Mempelajari dasar-dasar React dan cara membuat komponen.", "Jane Doe")
 readNote();
-updateNote(0, "Mempelajari JavaScript Lanjutan", "Mempelajari konsep lanjutan dalam JavaScript.");
+console.log("=================================================================================================================")
+updateNote(1, "Mempelajari JavaScript Lanjutan", "Mempelajari konsep lanjutan dalam JavaScript.");
 readNote();
+console.log("=================================================================================================================")
+deleteNote(1)
+readNote()

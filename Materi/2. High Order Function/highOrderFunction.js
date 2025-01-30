@@ -1,5 +1,7 @@
-// Higher-Order Function  
-  
+// ======================================================================================
+// 1. Higher-Order Function
+// ======================================================================================
+
 // Fungsi higherOrderFunction yang menerima fungsi callback  
 function higherOrderFunction(callback) {  
   // Memanggil fungsi callback dan mengembalikan hasilnya  
@@ -13,9 +15,11 @@ function simpleCallback() {
 }  
   
 // Menggunakan higherOrderFunction dengan simpleCallback  
-console.log(higherOrderFunction(simpleCallback)); // Output: "Hello from callback"  
+console.log(higherOrderFunction(simpleCallback)); // Output: "Hello from callback!"
 
-//========================================================================================================================
+// ======================================================================================
+// 2. Fungsi Apply
+// ======================================================================================
 
 // Fungsi apply yang menerima fungsi lain dan argumen yang diperlukan  
 function apply(operation, ...args) {  
@@ -42,11 +46,11 @@ const withDiscount = apply(discount, 25, productPrice); // Hasil: 375
 // Menampilkan hasil perhitungan  
 console.log('Product price:', productPrice); // Output: Product price: 500  
 console.log('With discount 25%:', withDiscount); // Output: With discount 25%: 375  
-  
-//========================================================================================================================
 
-// Array Method HOF  
-  
+// ======================================================================================
+// 3. Array Method HOF
+// ======================================================================================
+
 // Fungsi arrayMap menggunakan map untuk menggandakan setiap elemen  
 function arrayMap() {  
   let arr = [1, 2, 3, 4];  
@@ -69,4 +73,4 @@ function arrayReduce() {
 console.log(arrayMap()); // Output: [2, 4, 6, 8]  
 console.log(arrayFilter()); // Output: [2, 4]  
 console.log(arrayReduce()); // Output: 10  
-  
+// ======================================================================================
